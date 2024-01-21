@@ -11,3 +11,6 @@
 ## Tecnologias utilizadas no projeto
 * HTML
 * CSS
+
+
+### IMPORTANTE - CRIAR REQUISIÇÔES PARA INSERIR O CADASTRO EM UMA API. - OBJ trabalhar com back-end (server side).
