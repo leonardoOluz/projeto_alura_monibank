@@ -20,7 +20,7 @@ envioFormulario.addEventListener("submit", (e) => {
 
     window.location.href = './abrir-conta-form-2.html';
 
-})
+});
 
 const tipoDeErros = [
     "valueMissing",
@@ -28,12 +28,12 @@ const tipoDeErros = [
     "patternMismatch",
     "tooShort",
     "customError"
-]
+];
 
 camposDoFormulario.forEach((campo) => {
     campo.addEventListener("blur", () => verificarCampo(campo));
     campo.addEventListener("invalid", evento => evento.preventDefault());
-})
+});
 
 function verificarCampo(campo) {
     let mensagem = "";
@@ -45,13 +45,14 @@ function verificarCampo(campo) {
 
     if (campo.name == "aniversario" && campo.value != "") {
         ehMaiorDeIdade(campo);
-    }
+    };
+
     tipoDeErros.forEach(erro => {
         if (campo.validity[erro]) {
             mensagem = mensagens[campo.name][erro];
             console.log(mensagem);            
         }
-    })
+    });
 
     const mensagemErros = campo.parentNode.querySelector(".mensagem-erro");
     const validadorDeInput = campo.checkValidity();
@@ -60,6 +61,6 @@ function verificarCampo(campo) {
         mensagemErros.textContent = mensagem;
     } else {
         mensagemErros.textContent = "";
-    }
+    };
 
-}
+};
